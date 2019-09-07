@@ -1,0 +1,432 @@
+<!--index.wxml-->
+
+<!-- 位置 -->
+<view class='top'>
+
+  <navigator class="location" url="../cityselect/cityselect">
+    <view class='dingwei'>
+
+      <text class='icon iconfont icon-weizhi'></text>{{location}}{{county}}
+
+    </view>
+
+
+  </navigator>
+  <view class='dingwei_gengduo'>
+    <text class='icon iconfont icon-16_shixinxiangxia'></text> </view>
+
+  <!--搜索-->
+  <navigator url='../search/search'>
+
+    <view class="sousuo" bindtap="suo">
+
+
+
+
+      <view class="search-bar__box">
+        <icon class="icon-search_in-box sousuotu" type="search" size="14" color='white'></icon>
+        <!-- <input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" disabled="true"/> -->
+        <text class="guanjianzi">   搜索关键字</text>
+        <!-- <view class="icon-clear" wx:if="{{inputVal.length > 0}}"> -->
+        <!-- <icon type="clear" size="14"></icon> -->
+        <!-- </view> -->
+      </view>
+
+
+    </view>
+  </navigator>
+</view>
+
+<scroll-view scroll-y="true">
+
+
+  <view class='daohang'>
+
+
+    <view class="{{curNav == 1 ? 'addtab' : ''}} tab" data-num="1" bindtap="switchRightTab" data-id="1">
+
+      <view class='tab_shang' data-num="1" data-id="1">
+
+        <text class='icon iconfont icon-sheji biao' data-num="1" data-id="1"></text> </view>
+      装修设计
+
+
+    </view>
+
+    <view class="{{curNav == 2 ? 'addtab' : ''}} tab" data-num="2" bindtap="switchRightTab" data-id="2">
+      <view class='tab_shang' data-num="2" data-id="2">
+        <text class='icon iconfont icon-shouzhi biao' data-num="2" data-id="2"></text>
+      </view>
+
+      点我来到家 </view>
+    <view class="{{curNav == 3 ? 'addtab' : ''}} tab" data-num="3" bindtap="switchRightTab" data-id="3">
+
+      <view class='tab_shang' data-num="3" data-id="3">
+        <text class='icon iconfont icon-gouwuche biao' data-num="3" data-id="3"></text> </view>
+
+      直购商城</view>
+    <view class='tongcheng tab' class="{{curNav == 4 ? 'addtab' : ''}} tab" data-num="4" bindtap="switchRightTab" data-id="4">
+      <view class='tab_shang' data-num="4" data-id="4">
+        <text class='icon iconfont icon-weizhi biao' data-num="4" data-id="4"></text>
+      </view>
+
+
+
+      同城生活</view>
+  </view>
+
+  <!-- 广告位 -->
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+    <block wx:for="{{imgUrls}}" wx:key=''>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="100%" height="180" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+
+
+
+
+
+
+
+
+  <!--主盒子  装修设计-->
+  <view class="container" wx:if="{{curNav==1}}">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+      <view class="nav_left_items ">
+        设计预算
+      </view>
+      <view class="nav_left_items ">
+        招标代理
+      </view>
+      <view class="nav_left_items ">
+        质量服务
+      </view>
+      <view class="nav_left_items ">
+        工匠服务
+      </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class='nav_right'>
+      <scroll-view class="nav" scroll-x style="overflow:hidden;height:100%">
+
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{yusuan}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{daili}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{zhiliang}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{gongjiang}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+
+
+
+
+
+  <!--主盒子    点我来到家-->
+  <view class="container" wx:if="{{curNav==2}}">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+      <view class="nav_left_items ">
+        家政安装
+      </view>
+      <view class="nav_left_items">
+        智能+
+      </view>
+      <view class="nav_left_items ">
+        租换收
+      </view>
+      <view class="nav_left_items ">
+        同城配送
+      </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class='nav_right'>
+      <scroll-view class="nav" scroll-x style="overflow:hidden;height:100%">
+
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{jiazheng}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{zhineng}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{zuhuan}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{tongcheng}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+
+
+
+
+  <!--主盒子    直购商城-->
+  <view class="container" wx:if="{{curNav==3}}">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+      <view class="nav_left_items ">
+        装修建材
+      </view>
+      <view class="nav_left_items">
+        电器陶瓷
+      </view>
+      <view class="nav_left_items ">
+        办公用品
+      </view>
+      <view class="nav_left_items">
+        农夫特产
+      </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class='nav_right'>
+      <scroll-view class="nav" scroll-x style="overflow:hidden;height:100%">
+
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{zhuangxiu}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{dianqi}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{bangong}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{nongfu}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+
+
+
+
+  <!--主盒子     同城生活-->
+  <view class="container" wx:if="{{curNav==4}}">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+      <view class="nav_left_items ">
+        商务服务
+      </view>
+      <view class="nav_left_items ">
+        教育培训
+      </view>
+      <view class="nav_left_items ">
+        休闲娱乐
+      </view>
+      <view class="nav_left_items">
+        汽车服务
+      </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class='nav_right'>
+      <scroll-view class="nav" scroll-x style="overflow:hidden;height:100%">
+
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{shangwu}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{jiaoyu}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{xiuxian}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+        <view class="nav_right_items">
+          <view class='neirong' wx:for="{{qiche}}" wx:key='name' bindtap='dianji' data-name='{{item.name}}'>{{item.name}}
+            <image src='../../image/sanjiao.png'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+
+  <!-- 店铺列表 -->
+  <view class='liebiao'>
+    <navigator url="../items/items" hover-class="navigator-hover">
+      <view class='liebiao_zuo'>
+        <image src='../../image/xin.png'></image>
+
+        <view class='name left'>姓名
+          <text style='font-size:18rpx;color:green'>实名</text>
+        </view>
+        <view class='jineng left'>技能
+          <text class='ji'>技能绘画</text>
+          <text class='ji'> 装修队长</text>
+        </view>
+        <view class='fuwu left'>服务
+          <text class='fu'> 各类装修</text>
+        </view>
+        <!-- </view> -->
+      </view>
+      <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='liebiao'>
+   <navigator url="../items/items" hover-class="navigator-hover">
+      <view class='liebiao_zuo'>
+        <image src='../../image/xin.png'></image>
+
+        <view class='name left'>姓名
+          <text style='font-size:18rpx;color:green'>实名</text>
+        </view>
+        <view class='jineng left'>技能
+          <text class='ji'>技能绘画</text>
+          <text class='ji'> 装修队长</text>
+        </view>
+        <view class='fuwu left'>服务
+          <text class='fu'> 各类装修</text>
+        </view>
+        <!-- </view> -->
+      </view>
+      <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='liebiao'>
+      <navigator url="../items/items" hover-class="navigator-hover">
+      <view class='liebiao_zuo'>
+        <image src='../../image/xin.png'></image>
+
+        <view class='name left'>姓名
+          <text style='font-size:18rpx;color:green'>实名</text>
+        </view>
+        <view class='jineng left'>技能
+          <text class='ji'>技能绘画</text>
+          <text class='ji'> 装修队长</text>
+        </view>
+        <view class='fuwu left'>服务
+          <text class='fu'> 各类装修</text>
+        </view>
+        <!-- </view> -->
+      </view>
+      <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='liebiao'>
+    <navigator url="../items/items" hover-class="navigator-hover">
+      <view class='liebiao_zuo'>
+        <image src='../../image/xin.png'></image>
+
+        <view class='name left'>姓名
+          <text style='font-size:18rpx;color:green'>实名</text>
+        </view>
+        <view class='jineng left'>技能
+          <text class='ji'>技能绘画</text>
+          <text class='ji'> 装修队长</text>
+        </view>
+        <view class='fuwu left'>服务
+          <text class='fu'> 各类装修</text>
+        </view>
+        <!-- </view> -->
+      </view>
+      <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='liebiao'>
+     <navigator url="../items/items" hover-class="navigator-hover">
+      <view class='liebiao_zuo'>
+        <image src='../../image/xin.png'></image>
+
+        <view class='name left'>姓名
+          <text style='font-size:18rpx;color:green'>实名</text>
+        </view>
+        <view class='jineng left'>技能
+          <text class='ji'>技能绘画</text>
+          <text class='ji'> 装修队长</text>
+        </view>
+        <view class='fuwu left'>服务
+          <text class='fu'> 各类装修</text>
+        </view>
+        <!-- </view> -->
+      </view>
+      <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>
+
+<button class='jiaru'open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">加入平台</button>
+
+
+<!-- 弹窗 -->

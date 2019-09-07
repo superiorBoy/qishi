@@ -1,0 +1,13 @@
+.top_head {
+  margin-top: 30rpx;
+  width: 160rpx; 
+  height: 160rpx; 
+  border-radius: 100%; 
+  border: 1px solid rgba(51, 51, 51, 1);
+       }
+.top_text { 
+ line-height: 40rpx;  
+ color: rgba(229, 28, 35, 1);  
+ font-size: 28rpx;  
+ font-family: Roboto;
+ }

@@ -1,0 +1,11 @@
+/* pages/xinxi/xinxi.wxss */
+.list{width: 95%;height: 70rpx;border-bottom: 1px solid rgb(230, 225, 225);line-height: 70rpx;padding: 3rpx 10rpx;box-sizing: border-box;margin:0 auto;font-size: 30rpx;
+}
+.list input{display: inline-block;float: right;text-align: right;}
+.btn{background-color: rgb(158, 230, 65);border: none;margin-top: 47rpx;width: 85%;}
+.list text{text-align: right;display: inline-block;}
+.touxiang,.userinfo{height: 70rpx;width: 95%;margin: 0 auto;border-bottom: 1px solid rgb(230, 225, 225);font-size: 30rpx;line-height: 70rpx;padding: 3rpx 10rpx;box-sizing: border-box;}
+.touxiang image{height: 95%;width: 60rpx;display: inline-block;float: right;}
+.userinfo-nickname{float: right;}
+.shijian{float: right;}
+.userinfo input{text-align: right;}

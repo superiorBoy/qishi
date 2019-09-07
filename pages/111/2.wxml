@@ -1,0 +1,4 @@
+  <view class='top_head_border'>   
+ <image class='top_head' src='{{head}}'></image>  
+ <view class='top_text'  mode="aspecFill" bindtap="headimage">点击更换头像</view>
+ </view>

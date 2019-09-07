@@ -1,0 +1,192 @@
+
+.daohang{
+  /* margin: 20rpx 20rx 0 0; */
+  width: 100%;
+  height: 109rpx;
+  /* border: 1rpx solid red; */
+margin-top: 2rpx
+}
+.biao{
+  font-size: 61rpx;
+}
+.tab{
+  width: 25%;
+  height: 120rpx;
+  background: white;
+  float: left;
+  text-align: center;
+  /* padding: 0 20rpx; */
+  box-sizing: border-box;
+  /* line-height: 300rpx; */
+  padding:0 20rpx;
+
+font-size:27rpx;
+
+}
+
+.addtab{
+  width: 25%;
+  height: 120rpx;
+  background: white;
+  float: left;
+  text-align: center;
+  /* padding: 0 20rpx; */
+  box-sizing: border-box;
+  /* line-height: 300rpx; */
+  padding:0 20rpx;
+ color: #00c4ec;
+font-size:28rpx;
+
+}
+
+
+.addtab_shang{
+  height: 50%;
+   color: #00c4ec;
+}
+
+.tab_shang{
+  height: 68%;
+}
+.biao{
+display:inline;
+
+}
+
+.slide-image{
+  width: 100%;
+height: 407rpx;
+}
+.sheji{
+  color: #00c4ec;
+}
+
+swiper{
+  margin: 18rpx 0;
+  height: 407rpx;
+}
+/* 1. 设置整个页面的背景颜色 */
+page{  
+  background: #f5f5f5;  
+  /* 避免左侧Item不够时 被白色覆盖*/
+}  
+/* 2.主盒子 */  
+.container {  
+  width: 100%;             /* 宽度占屏幕的100% */
+  height:356rpx;
+            /* 高度占屏幕的100% */
+  background-color: #fff;  /* 背景颜色 */
+  margin: 2rpx 0rpx;
+}
+ /* 3.左盒子*/ 
+
+ /* 3.1. 左侧栏主盒子总体设置 */  
+.nav_left{  
+  position:relative;    /* 使用绝对定位 */
+  top:0rpx;              /* 距离上边距：0px */
+  left:0rpx;             /* 距离左边距：0px */
+  width: 25%;           /* 每个item所占的宽度 */
+  background: #f5f5f5;  /* 主盒子设置背景色为灰色 */  
+   /*text-align: center;   文字居中显示 */
+   float: left;
+   height: 314rpx;
+   text-align: center;
+}
+
+/* 3.2. 左侧栏的每个item */  
+.nav_left .nav_left_items{  
+  height: 75rpx;      /* 每个item高40px*/  
+  /*  padding: 6rpx 0;   上内边距和下内边距是 6px[增加高度]  右内边距和左内边距是 0px*/
+  border-bottom: 1rpx solid #dedede;   /* 设置下边线 */  
+  font-size: 31rpx;   /* 设置文字大小：14px */ 
+  line-height: 75rpx;
+  border: 1rpx solid #b5b5b5;
+  margin: 3rpx 0;
+} 
+
+/* 3.3. 左侧栏list的item被选中时*/  
+.nav_left .nav_left_items.active{ 
+  background: #fff;  /* 背景色变成白色 */  
+  color: #00c4ec;    /* 字体编程蓝色 */
+  border-left: 3rpx solid #00c4ec;  /* 设置边框的宽度以及颜色 */
+}
+/* 4.右盒子 */  
+
+/* 4.1. 右侧栏主盒子总体设置 */  
+.nav_right{  
+  position: relative;   /* 使用绝对定位 */  
+  top: 0;         /* 距离上边距：0px */
+  left: 2%;     /* 距离左边距：80px */
+  width: 74%;     /* 右侧主盒子所占宽度 */
+  height: 323rpx; /* 右侧主盒子所占高度 */
+   /* padding: 10rpx; 所有 4 个内边距都是 10px*/
+  box-sizing: border-box;  /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+  /*background: rgb(160, 151, 151);         右侧主盒子背景颜色 */
+  overflow: hidden;
+white-space: nowrap;
+display: inline-block;
+background: white;
+float: left;
+}
+
+/* 4.2. 右侧栏中的每个item */  
+.nav_right .nav_right_items{  
+  float: left;          /* 浮动向左 */  
+  width: 200%;        /* 每个item设置宽度是33.33% */  
+  height: 75rpx;        /* 每个item设置高度是120px */ 
+  text-align: center;   /* 设置图片下方的提示文字居中显示 */
+  /* background: red; */
+  /* border: 1rpx solid red; */
+  display: inline-block;
+  
+    margin-top: 6rpx;    /* 图片距离上边距15px */ 
+}  
+
+
+
+
+/* 4.3. 右侧栏中的每个item的图样式设置 */  
+ 
+.scroll_box{
+width: 100%;
+height: 307rpx;
+overflow: hidden;
+padding: 20rpx;
+background: #fff;
+white-space: nowrap;
+}
+.item_list{
+width: 160rpx;
+height: auto;
+margin-right: 23rpx;
+display: inline-block;
+}
+
+
+.item{
+  width:600rpx;
+  height: 500rpx;
+  /* background: red; */
+  /* display: inline-block; */
+}
+.neirong{
+width:201rpx;
+height:59rpx;
+border:1rpx solid #b5b5b5;
+float:left;
+line-height:59rpx;
+position:relative;
+margin:7rpx 8rpx;
+font-size: 24rpx;
+
+  
+}
+.neirong image{
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+
+}

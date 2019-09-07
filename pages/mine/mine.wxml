@@ -1,0 +1,80 @@
+<!--index.wxml-->
+
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"wx-if='{{ zhuangtai}}' >点击授权</button>
+
+
+<view class="mine_container">
+  <view class="userinfo">
+    <view class="avatar_view">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+        <view class="username_view">
+            <view class="in_username_view">
+              <text class="username">{{userInfo.nickName}}</text>
+              <!-- <text class="rec_id">我的推荐人ID：{{rec_id}}</text> -->
+            </view>
+        </view>
+  </view>
+
+
+
+
+
+
+  <button class="order"open-type="getUserInfo" bindgetuserinfo="xinxi" >
+    <view class="order_img_view">
+      <image class="order_icon" src="/pics/icons/rec_order.png"></image>
+    </view>
+    <view class="my_order_view" >
+      <text class="my_order">个人信息</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/pics/icons/jiantou_grey.png"></image>
+    </view>
+  </button>
+
+
+  <button class="order"open-type="getUserInfo" bindgetuserinfo="join" >
+
+    <view class="order_img_view">
+      <image class="order_icon" src="/pics/icons/order.png"></image>
+    </view>
+    <view class="my_order_view">
+      <text class="my_order">制作名片</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/pics/icons/jiantou_grey.png"></image>
+    </view>
+
+  </button>
+ 
+
+
+<navigator url='../aboutus/about'>
+  <button class="income"  >
+    <view class="income_img_view">
+      <image class="income_icon" src="/pics/icons/mine_selected.png"></image>
+    </view>
+    <view class="income_view">
+      <text class="my_income">关于我们</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/pics/icons/jiantou_grey.png"></image>
+    </view>
+  </button>
+</navigator>
+
+
+
+</view>
+  <button class="income" open-type='contact' >
+    <view class="income_img_view">
+      <image class="income_icon" src="/pics/icons/earphone.png"></image>
+    </view>
+    <view class="income_view">
+      <text class="my_income">联系客服</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/pics/icons/jiantou_grey.png"></image>
+    </view>
+  </button>

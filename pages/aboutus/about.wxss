@@ -1,0 +1,3 @@
+.zhaopian{width: 400rpx;height: 400rpx;margin: 0 auto}
+.zhaopian image{width: 100%;height: 100%;}
+.jianjie{padding: 0 10rpx;font-size: 30rpx;text-indent: 32px;}

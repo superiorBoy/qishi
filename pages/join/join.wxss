@@ -1,0 +1,106 @@
+.zhizuo{text-align: center;font-size: 32rpx;color: #ff842f;margin-bottom: 10rpx}
+.touxiang{width: 200rpx;height: 200rpx;border: 1rpx solid gray;float: left;margin-bottom: 30rpx}
+.touxiang image{width: 100%;height: 100%}
+.left{float: left;width: 200rpx;height: 80rpx;line-height: 80rpx;margin-bottom:35rpx;padding:0 9rpx;
+
+
+}
+.right{width: 500rpx;height: 80rpx;border: 1rpx solid gray;float:right;margin-bottom: 35rpx;
+line-height: 80rpx;
+margin-right:10rpx;
+}
+.left text{color: red;height: 80rpx;}
+.shuoming{width: 100%;height: 50rpx;float: left;font-size: 30rpx;color: gray}
+.shuoming text{color: red}
+button{background: #00b7f0;color: white}
+.select_box {
+  background-color: #fff;
+  padding: 0;
+  width: 100%;
+  float: right;
+  position: relative;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  text-align: left;
+  animation: myfirst 0.5s;
+  font-size: 30rpx;
+}
+
+.select_one {
+  padding-left: 20rpx;
+  width: 100%;
+  height: 60rpx;
+  position: relative;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+}
+.xiala{position: relative}
+.xiala image{ height: 50rpx;
+  width: 50rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 20rpx;}
+ .right text{border-radius:10rpx;
+background:#eb6100;
+color:white;
+padding:5rpx;
+margin:0 5rpx;
+width:171rpx;
+height:61rpx;
+line-height: 61rpx;
+text-align: center;
+/* display: inline-block */
+}
+textarea{width: 100%;height:100%;line-height: 30rpx}
+.danwei{width: 100%;float: left}
+.tijiao{width: 100%;float: left}
+
+
+/* 相册 */
+.gallery {    
+  width:100%;
+  margin: 0 auto;
+  display: flex;    
+  justify-content: flex-start;    
+  flex-wrap: wrap;
+}
+/*每张图片所占容器*/
+.item {    
+  position: relative;    
+  margin:10rpx 5rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.item image{
+  width: 100%;
+  height: 100%;
+}
+/*add按钮*/
+.item .addIcon{
+  position:relative;
+  width:150rpx;
+  height:150rpx;
+  text-align:center;
+  line-height:150rpx;
+  font-size:60rpx;
+  background: #f2f2f2;
+  color: #555;
+}
+/*删除按钮*/
+.delete {    
+  position:absolute;
+  right:0;
+  top:-20rpx;
+
+  /* background:#ccc; */
+  opacity:1;
+  height: 36rpx;
+  font-size:22rpx;
+  font-weight:700;
+  padding:0 8rpx 0 10rpx;
+  color: red;
+}
+.xiangce{height: auto}
+.fuwu{height: auto;}
+/* .del{width: 10rpx;height: 10rpx;position: absolute} */

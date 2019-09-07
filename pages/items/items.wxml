@@ -1,0 +1,105 @@
+
+
+
+
+<import src="../../tabbar/tabbar.wxml" />
+
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+
+
+
+<view class='liebiao'>
+
+  <view class='liebiao_zuo'>
+    <image src='../../image/xin.png'></image>
+
+    <view class='name left'>店铺店铺店铺店铺店铺
+      <text style='font-size:18rpx;color:green'>实名</text>
+    </view>
+    <view class='jineng left'>技能
+      <text class='ji'>技能绘画</text>
+      <text class='ji'> 装修队长</text>
+    </view>
+    <view class='fuwu left'>服务
+      <text class='fu'> 各类装修</text>
+    </view>
+    <!-- </view> -->
+  </view>
+  <!-- <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view> -->
+
+</view>
+
+<view class='item'>
+  <view class='item_top'>
+  <text class='icon iconfont icon-neirong'></text>  服务内容
+  </view>
+  <view class='item_bottom'>
+    承接学校工程，大小工地钻孔，水电孔，楼面，各种空调，人员充足，欢迎致电。
+  </view>
+</view>
+<view class='item'>
+  <view class='item_top'>
+    <text class='icon iconfont icon-tupian1'></text> 图片展示
+  </view>
+  <view class='item_bottom'>
+    <view class="image-container">
+      <image src="{{item}}" wx:for='{{items}}' data-src="{{item}}" bindtap="previewItem"></image>
+
+    </view>
+
+
+
+  </view>
+</view>
+<view class='item'>
+  <view class='item_top'>
+  <text class='icon iconfont icon-quyu'></text>  服务区域
+  </view>
+  <view class='item_bottom'>
+    全杭州范围内
+  </view>
+</view>
+<view class='item'>
+  <view class='item_top'>
+   <text class='icon iconfont icon-xiangxijieshao'></text> 详细介绍
+  </view>
+  <view class='item_bottom'>
+    本人团队专业钻孔，一次成型，承接各种工地，学校工程
+  </view>
+</view>
+<view class='item'>
+  <view class='item_top'>
+  <text class='icon iconfont icon-weibiaoti-_danwei'></text>  所属单位
+  </view>
+  <view class='item_bottom'>
+    杭州市点我来服务有限公司
+  </view>
+</view>
+
+<button bindtap="payment" class="zhifu" wx:if="{{zhifu}}">支付一元查看电话</button>
+
+
+
+<view class="item ipone hide{{showView?'show':''}}" bindtap="onCall">
+  <view class='item_top'>
+  <text class='icon iconfont icon-dianhua'></text>  联系电话
+  </view>
+  <view class='item_bottom'>
+    {{phone}}
+  </view>
+</view>
+
+
+<view class='collect'bindtap="haveSave"> 
+
+
+ <image class="save " src="{{isClick?'../../image/onshoucang.png':'../../image/shoucang.png'}}" ></image>
+<view>
+   <text class="saveText">{{isClick?'已收藏':'收藏'}}</text></view></view>

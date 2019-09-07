@@ -1,0 +1,29 @@
+<form bindsubmit="bindFormSubmit">
+
+<view class='touxiang' bindtap="headimage"> <text>头像</text>  <image class="userinfo-avatar" src="{{head}}"></image> </view>
+
+<view class="userinfo">
+用户名
+<input value="{{userInfo.nickName}}"class="userinfo-nickname"></input>
+    <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+</view>
+
+
+
+<view class='list'>微信号  <input placeholder='点击输入'name="weixin">  </input>   </view>
+<view class='list'>手机号  <input placeholder='点击输入'name="shoujihao">  </input>   </view>
+<view class='list'>性别  <input placeholder='点击输入'>  </input>   </view>
+ <picker mode="date" value="{{date}}" start="1900-09-01" end="2019-05-01" bindchange="bindDateChange"> 
+<view class='list'>出生日期 
+<!-- <text class='shijian'name='shijian'>{{date}}</text> -->
+<input placeholder='点击输入'value='{{date}}' name='shijian' disabled='true'></input>
+  </view>
+  
+  </picker> 
+<view class='list'>所在地  <input placeholder='点击输入'name="suozaidi">  </input>   </view>
+<view class='list'>邮箱  <input placeholder='点击输入'name="youxiang">  </input>   </view>
+<view class='list'>职业  <input placeholder='点击输入'name="zhiye">  </input>   </view><view class='list'>公司  <input placeholder='点击输入'name="gongsi">  </input>   </view>
+<button form-type="submit" class='btn'>保存</button>
+
+</form>
+

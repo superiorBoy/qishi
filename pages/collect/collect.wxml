@@ -1,0 +1,46 @@
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">收藏名片</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">收藏团队</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">收藏店铺</view>
+  </view>
+<view class = "{{currentTab == 0 ? 'show':'hidden'}}" >
+    <scroll-view>
+  <view class='liebiao'>
+    <navigator url="../items/items" hover-class="navigator-hover">
+      <view class='liebiao_zuo'>
+        <image src='../../image/xin.png'></image>
+
+        <view class='name left'>姓名
+          <text style='font-size:18rpx;color:green'>实名</text>
+        </view>
+        <view class='jineng left'>技能
+          <text class='ji'>技能绘画</text>
+          <text class='ji'> 装修队长</text>
+        </view>
+        <view class='fuwu left'>服务
+          <text class='fu'> 各类装修</text>
+        </view>
+        <!-- </view> -->
+      </view>
+      <view class='liebiao_you'>
+        <text class='icon iconfont icon-dianhua liebiao_you_item'></text>
+        <navigator></navigator>
+        <text class='liebiao_you_item'><text class='icon iconfont icon-good_active-copy'></text> 好评1</text>
+        <navigator></navigator>
+        <navigator></navigator>
+        <text class='liebiao_you_item'>  <text class='icon iconfont icon-weizhi'style="color:black"></text>20.25km</text>
+      </view>
+    </navigator>
+  </view>
+    </scroll-view>
+  </view>
+  <view class = "{{currentTab == 1 ? 'show':'hidden'}}" >
+    <scroll-view>
+      <text>暂无内容2</text>
+    </scroll-view>
+  </view>
+  <view class = "{{currentTab == 2 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容3</text>
+    </scroll-view>
+  </view>

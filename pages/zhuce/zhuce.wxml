@@ -1,0 +1,30 @@
+<view class='body'>
+
+
+<view class="box">
+<view class="box_title">
+<view>注册或登录手机号绑定</view>  
+<view>必须为本人的微信</view>
+</view>
+<view class="box_center">
+<input placeholder="请输入手机号"  bindinput='changeSearch'></input>
+<button>一键获取</button>
+
+</view>
+<view class="box_center" wx-if='{{showyan}}'>
+<input placeholder="短信验证码"  ></input>
+<button disabled="{{disabled}}" bindtap="yanzhengma">{{buttonTitle}}</button>
+
+</view>
+<view class="box_bottom">
+
+<button bindtap="quxiao">取消</button>
+
+<button class="queren" bindtap="queren">确定</button>
+</view>
+</view>
+
+
+
+
+</view>

@@ -1,0 +1,93 @@
+<view class='zhizuo'>制作名片，即加入平台</view>
+<view class='zhizuo'>制作一张精美的图片，才能吸引客户，增加生意</view>
+<form bindsubmit="bindFormSubmit">
+<view class='touxiang' bindtap="headimage">
+ <image  src="{{head}}"></image>
+
+</view>
+<input  class='right'value='{{userInfo.nickName}}'></input>
+
+<view class='right'open-type="getPhoneNumber"></view>
+<view class='left'>性别<text>*</text></view>
+<view class='right'>
+
+    <view class='xiala'  bindtap='bindShowMsg'>
+         <span>{{grade_name}}</span>
+      <image src='/image/xiala.png'></image>
+       </view>
+  <!-- 下拉需要显示的列表 -->
+  <view class="select_box" wx:if="{{select}}">
+    <view wx:for="{{grades}}" wx:key="unique">
+      <view class="select_one" bindtap="mySelect" data-name="{{item}}">{{item}}</view>
+    </view>
+  </view>
+
+</view>
+<view class='left'>技能 <text>*</text></view>
+<view class='right fuwu'>
+ <!-- <view wx:for="{{jineng}}"data-index = "{{index}}" class='ji'>
+
+<text  >{{item}} </text> <span  bindtap='del'>X</span>
+
+</view> -->
+<text wx:for="{{jineng}}"data-index = "{{index}}" bindtap='del' wx:key="unique">{{item}}</text>
+<text class='add'style='background:#3184b0' bindtap='addji'wx:if="{{jineng.length <2}}" >添加</text>
+
+
+</view> 
+
+
+
+
+<view class='left'>服务 <text>*</text></view>
+<view class=' right fuwu '>
+<text wx:for="{{fuwu}}"bindtap='del2'data-index = "{{index}}"wx:key="unique">{{item}}</text> <text class='add'style='background:#3184b0' bindtap='add'wx:if="{{fuwu.length <2}}" >添加</text> 
+</view>
+<view class='left'>服务区域 <text>*</text></view>
+<view class='right'style="height: 200rpx; "><textarea placeholder=''name="quyu"></textarea></view>
+<view class='left'style="margin-top: 126rpx; ">服务内容 <text>*</text></view>
+<view class='right'style="height: 200rpx; "><textarea placeholder='限150字以内' maxlength='150'name="neirong"></textarea></view>
+<view class='left'style="margin-top: 126rpx; ">详细介绍 <text>*</text></view>
+<view class='right'style="height: 200rpx; "><textarea placeholder='限1000字以内'maxlength='1000'name="jieshao"></textarea></view>
+<view class='left'style="margin-top: 126rpx;">我的相册 <text>*</text></view>
+<view class='right xiangce'>
+<!-- <textarea> -->
+
+<view class="gallery">
+  <view class="item" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+    <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+<!-- 删除按钮 -->
+    <view class="delete" data-index="{{index}}" catchtap="deleteImg">X</view>
+
+  </view>
+  <view class="item" bindtap="chooseImg"wx:if="{{imgs.length <9}}" >
+    <view class='addIcon'>+</view>
+  </view>
+</view>
+
+<!-- </textarea> -->
+
+</view>
+
+<view class='danwei'>
+<view class='left'>所属单位 <text>*</text></view>
+<view class='right'><textarea placeholder='限18字以内' maxlength='18'name="danwei"></textarea></view>
+</view>
+
+<view class='left'>单位地址 <text>*</text></view>
+
+
+<view class='right'> <textarea placeholder='限20字以内'maxlength='20'name="dizhi"></textarea></view>
+<!-- <view class='left'>地址导航 <text>*</text></view>
+<view class='right'><textarea placeholder='限30字以内' maxlength='30'name="daohang"></textarea></view> -->
+<view class='left'>单位电话 <text>*</text></view>
+
+
+<view class='right'><input type="number" maxlength="11" placeholder="请输入电话号码"name="dianhua"></input></view>
+
+
+<view class='shuoming'>1.<text> *</text>  号为必填项</view>
+<view class='shuoming'>2.制作口碑名片后，即加入平台免费宣传</view>
+
+<button class='tijiao'form-type="submit">生成名片</button>
+  </form>

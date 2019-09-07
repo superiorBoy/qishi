@@ -1,0 +1,2 @@
+<!--pages/111/text.wxml-->
+<button bindtap='e'>点我呀 讨厌</button>
